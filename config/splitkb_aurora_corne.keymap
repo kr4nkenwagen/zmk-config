@@ -43,5 +43,9 @@
                                             &mkp LCLK       &trans           &kp SPACE   &kp RET    &trans    &mkp RCLK
                         >;
                 };
-        };
+  {
+    chosen {
+        zmk,backlight = &backlight;
+    };
+};       };
 };
