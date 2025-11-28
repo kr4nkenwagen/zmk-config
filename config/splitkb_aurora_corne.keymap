@@ -9,65 +9,70 @@
 #include <dt-bindings/zmk/bt.h>
 
 
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
         // ───────────────────────────────────────────────
-        // BASE LAYER (QMK Layer 0)
+        // BASE (QMK Layer 0)
         // ───────────────────────────────────────────────
         default_layer {
-            display-name = "Default";
+            display-name = "Base";
 
             bindings = <
     // Row 1
-    &kp TAB   &kp Q      &kp W        &kp E      &kp R      &kp T            &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
-    // Row 2 (home row mods)
-    &kp ESC   &ht LCTRL A  &ht LSHFT S  &ht LGUI D  &ht LALT F  &kp G        &ht RCTRL H  &ht RSHFT J  &ht RGUI K  &ht RALT L  &kp SEMI   &kp SQT
+    &kp TAB   &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
+    // Row 2
+    &kp ESC   &ht LCTRL A  &ht LSHFT S  &ht LGUI D  &ht LALT F  &kp G
+                &ht RCTRL H  &ht RSHFT J  &ht RGUI K  &ht RALT L  &kp SEMI   &kp SQT
     // Row 3
-    &trans    &kp Z      &kp X        &kp C      &kp V      &kp B            &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp PSCR
+    &trans    &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp PSCR
 
-    // Thumb cluster
-                &kp ESC   &mo 1       &kp SPACE       &kp RET   &mo 2       &trans
+    // Thumbs (3 per side)
+                &kp ESC   &mo 1     &kp SPACE     &kp RET   &mo 2     &trans
             >;
         };
 
         // ───────────────────────────────────────────────
-        // LOWER LAYER (QMK Layer 1)
+        // LOWER (QMK Layer 1)
         // ───────────────────────────────────────────────
         lower_layer {
             display-name = "Lower";
 
             bindings = <
     // Row 1
-    &kp ESC   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
+    &kp ESC   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
     // Row 2
-    &kp LCTRL &trans     &kp PSCR   &trans     &trans     &trans         &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+    &kp LCTRL &trans     &kp PSCR   &trans     &trans     &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
     // Row 3
-    &kp LSHFT &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans     &trans
+    &kp LSHFT &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-    // Thumb
-                &kp LGUI &trans     &kp SPACE        &kp RET   &mo 3      &kp RALT
+                &kp LGUI &trans    &kp SPACE     &kp RET   &trans    &kp RALT
             >;
         };
 
         // ───────────────────────────────────────────────
-        // RAISE LAYER (QMK Layer 2 — symbols + mouse)
+        // RAISE (QMK Layer 2)
         // ───────────────────────────────────────────────
         raise_layer {
             display-name = "Raise";
 
             bindings = <
     // Row 1
-    &kp TAB   &kp EXCL  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT       &kp CARET &kp AMPS   &kp ASTRK &kp LPAR   &kp RPAR   &kp BSPC
-    // Row 2 (mouse keys)
-    &kp LCTRL &kp MS_LEFT &kp MS_DOWN &kp MS_UP &kp MS_RIGHT &trans       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT   &kp BSLH   &kp GRAVE
+    &kp TAB   &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT
+                &kp CARET &kp AMPS   &kp ASTRK &kp LPAR   &kp RPAR   &kp BSPC
+    // Row 2
+    &kp LCTRL &kp MS_LEFT &kp MS_DOWN &kp MS_UP &kp MS_RIGHT &trans
+                &kp MINUS &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH   &kp GRAVE
     // Row 3
-    &kp LSHFT &kp UNDO   &kp CUT    &kp COPY   &kp PASTE  &trans          &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE   &kp TILDE
+    &kp LSHFT &kp UNDO   &kp CUT    &kp COPY   &kp PASTE  &trans
+                &kp UNDER &kp PLUS   &kp LBRC  &kp RBRC   &kp PIPE   &kp TILDE
 
-    // Thumb
-                &kp MB1  &trans     &kp SPACE          &kp RET   &trans   &kp MB2
+    // Thumbs
+                &kp MB1  &trans    &kp SPACE     &kp RET   &trans    &kp MB2
             >;
         };
     };
 };
+;
