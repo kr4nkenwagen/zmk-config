@@ -13,6 +13,8 @@
 
 / {
         keymap {
+
+                zmk,backlight = &backlight;
                 compatible = "zmk,keymap";
                 default_layer {
                         display-name = "Default Layer";
