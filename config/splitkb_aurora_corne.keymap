@@ -23,7 +23,7 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &mt LCTRL A &mt LSHFT S &mt LGUI D &mt LALT F &kp G   &mt RCTRL H &mt RSHFT J  &mt RGUI K &mt RALT L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                  &kp ESC &mo 1 &kp SPACE   &kp RET &mo 2 &trans
                         >;
                 };
                 lower_layer {
@@ -58,38 +58,3 @@
         };
 }
 
-/ {
-    keymap {
-        compatible = "zmk,keymap";
-       default_layer {
-            display-name = "Default";
-
-            bindings = <
-    &kp TAB   &kp Q      &kp W        &kp E      &kp R      &kp T            &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
-    &kp ESC   &ht LCTRL A  &ht LSHFT S  &ht LGUI D  &ht LALT F  &kp G        &ht RCTRL H  &ht RSHFT J  &ht RGUI K  &ht RALT L  &kp SEMI   &kp SQT
-    &trans    &kp Z      &kp X        &kp C      &kp V      &kp B            &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp PSCR
-                &kp ESC   &mo 1       &kp SPACE       &kp RET   &mo 2       &trans
-            >;
-        };
-        lower_layer {
-            display-name = "Lower";
-
-            bindings = <
-    &kp ESC   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
-    &kp LCTRL &trans     &kp PSCR   &trans     &trans     &trans         &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-    &kp LSHFT &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans     &trans
-                &kp LGUI &trans     &kp SPACE        &kp RET   &mo 3      &kp RALT
-            >;
-        };
-        raise_layer {
-            display-name = "Raise";
-
-            bindings = <
-    &kp TAB   &kp EXCL  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT       &kp CARET &kp AMPS   &kp ASTRK &kp LPAR   &kp RPAR   &kp BSPC
-    &kp LCTRL &kp MS_LEFT &kp MS_DOWN &kp MS_UP &kp MS_RIGHT &trans       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT   &kp BSLH   &kp GRAVE
-    &kp LSHFT &kp UNDO   &kp CUT    &kp COPY   &kp PASTE  &trans          &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE   &kp TILDE
-                &kp MB1  &trans     &kp SPACE          &kp RET   &trans   &kp MB2
-            >;
-        };
-    };
-};
