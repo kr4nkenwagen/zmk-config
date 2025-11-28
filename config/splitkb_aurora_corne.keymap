@@ -37,10 +37,10 @@
                 raise_layer {
                         display-name = "Raise Layer";
                         bindings = <
-   &kp TAB    &kp EXCL    &kp AT      &kp HASH     &kp DLLR      &kp PRCNT   &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-   &kp LCTRL  &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans      &kp MINUS  &kp EQUAL &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-   &kp LSHFT  &kp UNDO    &kp CUT     &kp COPY     &kp PASTE     &trans      &kp UNDER  &kp PLUS  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                      &mkp LCLK     &trans        &kp SPACE   &kp RET    &trans    &mkp RCLK
+   &kp TAB    &kp EXCL        &kp AT        &kp HASH        &kp DLLR         &kp PRCNT   &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+   &kp LCTRL  &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans      &kp MINUS  &kp EQUAL &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+   &kp LSHFT  &kp K_UNDO      &kp K_CUT     &kp K_COPY      &kp K_PASTE      &trans      &kp UNDER  &kp PLUS  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                            &mkp LCLK       &trans           &kp SPACE   &kp RET    &trans    &mkp RCLK
                         >;
                 };
         };
