@@ -60,17 +60,17 @@
 
             bindings = <
     // Row 1
-    &kp TAB   &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT
-                &kp CARET &kp AMPS   &kp ASTRK &kp LPAR   &kp RPAR   &kp BSPC
+    &kp TAB   &kp EXCL   &kp AT     &kp HASH   &kp DLR   &kp PRINTSCREEN 
+                &kp CARET &kp AMPS   &kp STAR &kp LPAR   &kp RPAR   &kp BSPC
     // Row 2
-    &kp LCTRL &kp MS_LEFT &kp MS_DOWN &kp MS_UP &kp MS_RIGHT &trans
-                &kp MINUS &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH   &kp GRAVE
+    &kp LCTRL &kp KP_LEFT &kp KP_DOWN &kp KP_UP &kp KP_RIGHT &trans
+                &kp MINUS &kp EQUAL  &kp LBRACKET     &kp RBRACKET     &kp BSLH   &kp GRAVE
     // Row 3
     &kp LSHFT &kp UNDO   &kp CUT    &kp COPY   &kp PASTE  &trans
                 &kp UNDER &kp PLUS   &kp LBRC  &kp RBRC   &kp PIPE   &kp TILDE
 
     // Thumbs
-                &kp MB1  &trans    &kp SPACE     &kp RET   &trans    &kp MB2
+                &kp BTN1  &trans    &kp SPACE     &kp RET   &trans    &kp BTN2
             >;
         };
     };
