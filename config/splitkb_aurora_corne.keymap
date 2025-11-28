@@ -7,6 +7,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600 // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 
 / {
         keymap {
@@ -35,9 +38,9 @@
                         display-name = "Raise Layer";
                         bindings = <
    &kp TAB    &kp EXCL    &kp AT      &kp HASH     &kp DLLR      &kp PRCNT   &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-   &kp LCTRL  &kp MS_LEFT &kp MS_DOWN &kp MS_DOWN  &kp MS_RIGHT  &trans      &kp MINUS  &kp EQUAL &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+   &kp LCTRL  &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans      &kp MINUS  &kp EQUAL &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
    &kp LSHFT  &kp UNDO    &kp CUT     &kp COPY     &kp PASTE     &trans      &kp UNDER  &kp PLUS  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                      &kp LGUI     &trans        &kp SPACE   &kp RET    &trans    &kp RALT
+                                      &mkp LCLK     &trans        &kp SPACE   &kp RET    &trans    &mkp RCLK
                         >;
                 };
         };
