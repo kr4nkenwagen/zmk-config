@@ -10,68 +10,43 @@
 
 
 
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        // ───────────────────────────────────────────────
-        // BASE (QMK Layer 0)
-        // ───────────────────────────────────────────────
         default_layer {
             display-name = "Base";
 
             bindings = <
-    // Row 1
     &kp TAB   &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
-    // Row 2
-    &kp ESC   &ht LCTRL A  &ht LSHFT S  &ht LGUI D  &ht LALT F  &kp G
-                &ht RCTRL H  &ht RSHFT J  &ht RGUI K  &ht RALT L  &kp SEMI   &kp SQT
-    // Row 3
-    &trans    &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH      &kp PSCR
-
-    // Thumbs (3 per side)
+    &kp ESC   &ht LCTRL A  &ht LSHFT S  &ht LGUI D  &ht LALT F  &kp G   &ht RCTRL H  &ht RSHFT J  &ht RGUI K  &ht RALT L  &kp SEMI   &kp SQT
+    &trans    &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH   &kp PRINTSCREEN
                 &kp ESC   &mo 1     &kp SPACE     &kp RET   &mo 2     &trans
             >;
         };
 
-        // ───────────────────────────────────────────────
-        // LOWER (QMK Layer 1)
-        // ───────────────────────────────────────────────
         lower_layer {
             display-name = "Lower";
 
             bindings = <
-    // Row 1
     &kp ESC   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
-    // Row 2
-    &kp LCTRL &trans     &kp PSCR   &trans     &trans     &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-    // Row 3
+    &kp LCTRL &trans     &kp PRINTSCREEN   &trans     &trans     &trans     &kp KP_LEFT   &kp KP_DOWN   &kp KP_UP     &kp KP_RIGHT  &trans     &trans
     &kp LSHFT &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-
                 &kp LGUI &trans    &kp SPACE     &kp RET   &trans    &kp RALT
             >;
         };
 
-        // ───────────────────────────────────────────────
-        // RAISE (QMK Layer 2)
-        // ───────────────────────────────────────────────
         raise_layer {
             display-name = "Raise";
 
             bindings = <
-    // Row 1
-    &kp TAB   &kp EXCL   &kp AT     &kp HASH   &kp DLR   &kp PRINTSCREEN 
-                &kp CARET &kp AMPS   &kp STAR &kp LPAR   &kp RPAR   &kp BSPC
-    // Row 2
-    &kp LCTRL &kp KP_LEFT &kp KP_DOWN &kp KP_UP &kp KP_RIGHT &trans
-                &kp MINUS &kp EQUAL  &kp LBRACKET     &kp RBRACKET     &kp BSLH   &kp GRAVE
-    // Row 3
-    &kp LSHFT &kp UNDO   &kp CUT    &kp COPY   &kp PASTE  &trans
-                &kp UNDER &kp PLUS   &kp LBRC  &kp RBRC   &kp PIPE   &kp TILDE
-
-    // Thumbs
+    &kp TAB   &kp EXCL   &kp AT     &kp HASH   &kp DLR   &kp PRCNT   &kp CARET &kp AMPS   &kp STAR &kp LPAR   &kp RPAR   &kp BSPC
+    &kp LCTRL &kp KP_LEFT &kp KP_DOWN &kp KP_UP &kp KP_RIGHT &trans   &kp MINUS &kp EQUAL  &kp LBRACKET  &kp RBRACKET   &kp BSLH   &kp GRAVE
+    &kp LSHFT &kp UNDO   &kp CUT    &kp COPY   &kp PASTE  &trans     &kp UNDERSCORE &kp PLUS   &kp LBRACE  &kp RBRACE   &kp PIPE   &kp TILDE
                 &kp BTN1  &trans    &kp SPACE     &kp RET   &trans    &kp BTN2
             >;
         };
     };
 };
+
