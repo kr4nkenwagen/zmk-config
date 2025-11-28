@@ -15,7 +15,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                zmk,backlight = &backght;
+                zmk,backlight = &backlight;
                 default_layer {
                         display-name = "Default Layer";
                         bindings = <
