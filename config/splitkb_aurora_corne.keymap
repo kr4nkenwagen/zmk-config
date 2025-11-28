@@ -5,8 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include "boards/nice_nano_v2.dts"
-#include "boards/pinctrl.dtsi"
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
