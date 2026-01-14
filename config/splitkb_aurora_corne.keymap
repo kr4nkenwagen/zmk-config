@@ -10,11 +10,22 @@
 };
 
 / {
-        keymap {
+  behaviors {
+      qmk_mt: qmk_mod_tap {
+          compatible = "zmk,behavior-hold-tap";
+          label = "QMK_MOD_TAP";
+          #binding-cells = <2>;
+          flavor = "tap-preferred";    // This is the QMK default logic
+          tapping-term-ms = <200>;     // Standard QMK TAPPING_TERM
+          quick-tap-ms = <200>;          // QMK doesn't have this by default
+          bindings = <&kp>, <&kp>;
+      };
+  };
+  keymap {
 
-                zmk,backlight = &backlight;
-                compatible = "zmk,keymap";
-                default_layer {
+            zmk,backlight = &backlight;
+            compatible = "zmk,keymap";
+            default_layer {
                         display-name = "Default Layer";
                         bindings = <
    &kp TAB  &kp Q         &kp W         &kp E       &kp R       &kp T   &kp Y         &kp U        &kp I        &kp O        &kp P      &kp BSPC
